@@ -3,7 +3,7 @@ import "../index.css"
 
 const bgImg = require("../images/bg.png")
 const cardImg1 = require("../images/card_nutrient.png")
-const cardImg2 = require("../images/card_allergy.png")
+const cardImg2 = require("../images/card_vegi.png")
 const cardImg3 = require("../images/card_recipe.png")
 
 function LandingPage() {
@@ -65,12 +65,12 @@ function LandingPage() {
   return (
     <div className="container-fluid">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row text-center">
           <div className="col-12">
             <div>나는 뭐 먹지</div>
           </div>
         </div>
-        <div className="row">
+        <div className="row text-center">
           <div className="col-12">
             <div>
               개인 맞춤형 메뉴 추천 서비스
