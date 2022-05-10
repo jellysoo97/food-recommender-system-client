@@ -5,6 +5,7 @@ import NavBar from "./components/Common/NavBar"
 import Footer from "./components/Common/Footer"
 
 import LandingPage from "./components/LandingPage"
+import Select from "./components/Select/Select"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div style={{ minHeight: "calc(100vh - 80px)" }}>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/select" element={<Select />} />
         </Routes>
       </div>
       <Footer />
