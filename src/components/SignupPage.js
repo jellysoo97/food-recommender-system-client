@@ -1,7 +1,7 @@
 import React from 'react';
 // import './signupPrac.css';
 
-function Signup(){
+function SignupPage(){
   return(
     <body>
       <div className="signup">
@@ -61,4 +61,4 @@ function Signup(){
     </body>
   )
 }
-export default Signup;
+export default SignupPage;
