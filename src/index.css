@@ -14,26 +14,24 @@ code {
     monospace;
 }
 
+/* LandingPage */
 .lp-bg {
   min-height: calc(100vh);
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./images/bg.png") no-repeat center;
   background-size: cover;
 }
-
 .lp-title {
   color: white;
   font-size: 3em;
   font-weight: bolder;
   margin-bottom: 1em;
 }
-
 .lp-desc {
   color: white;
   font-size: 20px;
   margin-bottom: 1em;
 }
-
 .lp-regi {
   color: #ed4c5c;
   font-weight: bold;
@@ -49,27 +47,19 @@ code {
   color: white;
   background-color: #ed4c5c;
 }
-
 .lp-card {
   min-height: calc(80vh);
   padding: 30px 0px;
 }
-
 .lp-card-top {
   font-size: 1.5em;
   font-weight: bold;
   padding: 10px;
 }
-
 .lp-card-bottom {
   height: calc(50vh);
   padding: 25px;
 }
-
-.lp-card-box {
-  position: relative;
-}
-
 .lp-card-img {
   margin: 0 auto;
   border-radius: 15px;
@@ -79,11 +69,10 @@ code {
 .lp-card-img img {
   border-radius: 15px;
 }
-
 .lp-card-body {
   position: relative;
-  top: -10%;
-  left: 18%;
+  margin: auto;
+  top: -60px;
   width: 300px;
   height: 200px;
   background-color: white;
@@ -91,15 +80,38 @@ code {
   box-shadow: 5px 5px 5px rgb(159, 155, 155);
   padding: 40px 15px;
 }
-
 .lp-card-title {
   color: #ed4c5c;
   font-size: 20px;
   font-weight: bold;
 }
-
 .lp-third {
   font-size: 1.5em;
   font-weight: bold;
   line-height: 2;
+}
+
+/* Select */
+.sl-table-box {
+  width: 250px;
+  height: 350px;
+  background-color: #eee;
+  margin: 0px 15px;
+}
+.sl-table-btn {
+  width: 800px;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 15px;
+  background-color: white;
+  color: #ed4c5c;
+  border: 2px solid #ed4c5c;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.sl-table-btn:hover {
+  color: white;
+  background-color: #ed4c5c;
+  border: 2px solid transparent;
 }
