@@ -34,12 +34,12 @@ function NavBar() {
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/select">
                     영양소 균형순으로
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/select">
                     선호도순으로
                   </a>
                 </li>
@@ -48,7 +48,7 @@ function NavBar() {
           </ul>
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <a href={"/"} className="btn btn-success">
+              <a href={"/login"} className="btn btn-success">
                 로그인
               </a>
             </li>

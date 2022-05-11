@@ -1,7 +1,6 @@
 import React from "react"
 import "../index.css"
 
-const bgImg = require("../images/bg.png")
 const cardImg1 = require("../images/card_nutrient.png")
 const cardImg2 = require("../images/card_vegi.png")
 const cardImg3 = require("../images/card_recipe.png")

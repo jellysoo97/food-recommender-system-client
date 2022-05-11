@@ -6,15 +6,26 @@ import Footer from "./components/Common/Footer"
 
 import LandingPage from "./components/LandingPage"
 import Signup from "./components/Signup"
+import Login from "./components/Auth/Login"
+import Select from "./components/Select/Select"
+
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      }
+    >
       <NavBar />
       <div style={{ minHeight: "calc(100vh - 80px)" }}>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/select" element={<Select />} />
         </Routes>
       </div>
       <Footer />
