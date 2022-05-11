@@ -1,10 +1,13 @@
 import React from 'react';
 // import './signupPrac.css';
+import "../index.css"
+import image from "../images/logo.png"
 
-function SignupPage(){
+function Signup(){
   return(
-    <body>
-      <div className="signup">
+    <div className="su-bg"style={{background:"#A8BA88"}}>
+      <div className="su">
+        <img src={image} width='45' height='45'/>
         <h1>나는 뭐 먹지</h1>
         <form>
           <label><span>아이디</span><input type="text"/></label>
@@ -58,7 +61,7 @@ function SignupPage(){
           <label>항상 보유중인 식자재에 체크해 주세요</label>
         </form> 
       </div>
-    </body>
+    </div>
   )
 }
-export default SignupPage;
+export default Signup;

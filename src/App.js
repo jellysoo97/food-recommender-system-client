@@ -5,7 +5,7 @@ import NavBar from "./components/Common/NavBar"
 import Footer from "./components/Common/Footer"
 
 import LandingPage from "./components/LandingPage"
-import SignupPage from "./components/SignupPage"
+import Signup from "./components/Signup"
 
 function App() {
   return (
@@ -14,12 +14,11 @@ function App() {
       <div style={{ minHeight: "calc(100vh - 80px)" }}>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/signup" element={<SignupPage />} />
+          <Route exact path="/signup" element={<Signup />} />
         </Routes>
       </div>
       <Footer />
-    </Suspense>
+    </Suspense> 
   )
 }
-
 export default App
