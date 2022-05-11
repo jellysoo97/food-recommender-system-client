@@ -4,6 +4,7 @@ import "../../../index.css"
 function Table(props) {
   const user = props.user
   const unable = props.unable
+  const datalist = props.datalist
 
   return (
     <div className="container-fluid py-5">
@@ -25,8 +26,32 @@ function Table(props) {
       </div>
       <div className="row mb-3">
         <div className="d-flex flex-row justify-content-center">
-          <div className="sl-table-box">1</div>
-          <div className="sl-table-box">2</div>
+          <div className="sl-table-box">
+            <table className="table table-hover">
+              <tbody>
+                {datalist
+                  ? datalist.map((el, index) => (
+                      <tr key={index} className="tableRowItems">
+                        <td className="tableCell">{el.userId}</td>
+                      </tr>
+                    ))
+                  : ""}
+              </tbody>
+            </table>
+          </div>
+          <div className="sl-table-box">
+            <table className="table table-hover">
+              <tbody>
+                {datalist
+                  ? datalist.map((el, index) => (
+                      <tr key={index} className="tableRowItems">
+                        <td className="tableCell">{el.id}</td>
+                      </tr>
+                    ))
+                  : ""}
+              </tbody>
+            </table>
+          </div>
           <div className="sl-table-box">3</div>
         </div>
       </div>
