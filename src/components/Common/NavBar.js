@@ -48,7 +48,7 @@ function NavBar() {
           </ul>
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <a href={"/"} className="btn btn-success">
+              <a href={"/login"} className="btn btn-success">
                 로그인
               </a>
             </li>
