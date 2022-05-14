@@ -96,25 +96,27 @@ code {
 
 .su{
   display : inline-block;
+  padding : 20px;
   background-color: white;
   outline: none;
   border-radius : 20px;
   position : absolute;
   left :15vw;
   top : 100px;
-  width :70vw
+  width :70vw;
 }
-.su h1{
-  text-align : center;
-  /* width : 1116px; */
-}
-.su label{
+.su-label{
   font-weight: bold;
   width:650px;
   display :block;
   padding : 20px;
 }
-.su label span {
+.su-label2{
+  font-weight: bold;
+  display:block;
+  padding :20px;
+}
+.su-label span {
   display :inline-block;
   width : 200px;
   text-align : left;
@@ -126,12 +128,7 @@ code {
   display : block;
   height: 140vh;
 }
-.su img{
-  display : inline;
-  position: relative;
-  top: 50px;
-  left: 35%;
-}
+
 
 /* Login */
 .lg-bg {
