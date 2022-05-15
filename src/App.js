@@ -8,6 +8,7 @@ import LandingPage from "./components/LandingPage"
 import Signup from "./components/Signup"
 import Login from "./components/Auth/Login"
 import Select from "./components/Select/Select"
+import Result from "./components/Result"
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/select" element={<Select />} />
+          <Route exact path="/result" element={<Result />} />
         </Routes>
       </div>
       <Footer />

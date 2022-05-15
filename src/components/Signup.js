@@ -12,7 +12,7 @@ function Signup(){
     sex:"male",
     age:"20",
     isveg:"N",
-    vegtype:"vegan",
+    vegtype:"",
     allergic:"N",
   })
 
