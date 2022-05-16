@@ -5,10 +5,10 @@ import NavBar from "./components/Common/NavBar"
 import Footer from "./components/Common/Footer"
 
 import LandingPage from "./components/LandingPage"
-import Signup from "./components/Signup"
+import Signup from "./components/Auth/Signup"
 import Login from "./components/Auth/Login"
 import Select from "./components/Select/Select"
-import Result from "./components/Result"
+import Result from "./components/Result/Result"
 
 
 function App() {

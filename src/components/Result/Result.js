@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import "../index.css"
+import "../../index.css"
 
 function Result(){
   const [recipename,setrecipename]=useState()
@@ -12,7 +12,7 @@ function Result(){
       axios
         .get("https://fad0d70d-d523-442e-8fa3-3fbe1e1b8bf2.mock.pstmn.io/get1")
         .then((response) => {
-          //왜 response.data 전체는 복제안되는지 모르겠....JSON.stringify(response.data)
+          //JSON.stringify(response.data)
           console.log(response.data)
           console.log(response.data.recipename)
           setrecipename([...response.data.recipename])

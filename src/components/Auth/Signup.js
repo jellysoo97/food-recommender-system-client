@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { MultiSelect } from "react-multi-select-component";
-import "../index.css"
-import image from "../images/logo.png"
+import "../../index.css"
+import image from "../../images/logo.png"
 
 function Signup(){
   const url ="https://fad0d70d-d523-442e-8fa3-3fbe1e1b8bf2.mock.pstmn.io/post1"
@@ -12,7 +12,7 @@ function Signup(){
     sex:"male",
     age:"20",
     isveg:"N",
-    vegtype:"",
+    vegtype:"N",
     allergic:"N",
   })
 
@@ -113,6 +113,7 @@ function Signup(){
             <label className="su-label">
               <span>어느 유형에 속하시나요?</span>
               <select onChange={(e)=>handle(e)} id="vegtype" value={data.vegtype} style={{width:320,textAlign:"center"}}>
+                <option value="N"></option>
                 <option value="fruitarian">프루테리언(fruitarian)</option>
                 <option value="vegan">비건(vegan)</option>
                 <option value="lacto-vegetarian">락토 베지테리언(lacto-vegetarian)</option>
