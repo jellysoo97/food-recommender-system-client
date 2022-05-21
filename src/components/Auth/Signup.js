@@ -25,13 +25,6 @@ function Signup(){
     { label:"아황산포함식품",value:"21"},
   ]
   const [unableselected, setunableSelected]=useState([]);
-  const alreoptions = [
-    { label: "간장",value:"1"},
-    { label: "된장",value:"2" },
-    { label: "고추장",value:"3"},
-    { label:"쌈장",value:"4"}
-  ];
-  const [alreselected, setalreSelected] = useState([]);
 
   function submit(e){
     e.preventDefault();
@@ -40,11 +33,8 @@ function Signup(){
       userpw: data.userpw,
       sex: data.sex,
       age: data.age,
-      veg: data.isveg,
       vegtype: data.vegtype,
-      allergic: data.allergic,
       unable : unableselected,
-      already: alreselected
     })
       .then(res=>{
         console.log(res.data)
@@ -58,8 +48,21 @@ function Signup(){
     setData(newdata)
     console.log(newdata)
   }
-
-
+  function changedis(e){
+    if(e.target.value==="Y"){
+      if(e.target.id==="isveg"){
+        document.getElementById("vegdiv").style.display="flex"
+      }else if(e.target.id==="allergic"){
+        document.getElementById("alldiv").style.display="flex"
+      }
+    }else if(e.target.value==="N"){
+      if(e.target.id==="isveg"){
+        document.getElementById("vegdiv").style.display="none"
+      }else if(e.target.id==="allergic"){
+        document.getElementById("alldiv").style.display="none"
+      }
+    }
+  }
 
   return(
     <div className="su-bg"style={{background:"#A8BA88"}}>
@@ -103,15 +106,15 @@ function Signup(){
           <div class="d-flex justify-content-center">
             <label className="su-label">
               <span>채식주의자이신가요?</span>
-              <select onChange={(e)=>handle(e)} id="isveg" value={data.isveg} style={{width:320,textAlign:"center"}}>
+              <select onChange={(e)=>{handle(e);changedis(e);}} id="isveg" value={data.isveg} style={{width:320,textAlign:"center"}}>
                 <option value="Y">네</option>
                 <option value="N">아니오</option>
               </select>
             </label>
           </div>
-          <div class="d-flex justify-content-center">
+          <div id="vegdiv" className="justify-content-center" style={{display:"none"}}>
             <label className="su-label">
-              <span>어느 유형에 속하시나요?</span>
+              <span>어느 채식 유형에 속하시나요?</span>
               <select onChange={(e)=>handle(e)} id="vegtype" value={data.vegtype} style={{width:320,textAlign:"center"}}>
                 <option value="N"></option>
                 <option value="fruitarian">프루테리언(fruitarian)</option>
@@ -127,28 +130,18 @@ function Signup(){
           <div class="d-flex justify-content-center">
             <label className="su-label">
               <span>알레르기가 있으신가요?</span>
-              <select onChange={(e)=>handle(e)} id="allergic" value={data.allergic} style={{width:320,textAlign:"center"}}>
+              <select onChange={(e)=>{handle(e);changedis(e);}} id="allergic" value={data.allergic} style={{width:320,textAlign:"center"}}>
                 <option value="Y">네</option>
                 <option value="N">아니오</option>
               </select>
             </label>
           </div>
-          <div class="d-flex justify-content-center">
+          <div id="alldiv" className="justify-content-center" style={{display:"none"}}>
             <label className="su-label2">주의해야할 알레르기 성분에 체크해 주세요
             <MultiSelect
                 options={unableoptions}
                 value={unableselected}
                 onChange={setunableSelected}
-                labelledBy="Select"
-              />
-            </label>
-          </div>
-          <div class="d-flex justify-content-center">
-            <label className="su-label2">항상 보유중인 식자재를 체크해 주세요
-            <MultiSelect
-                options={alreoptions}
-                value={alreselected}
-                onChange={setalreSelected}
                 labelledBy="Select"
               />
             </label>
